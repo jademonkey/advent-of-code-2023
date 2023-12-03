@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * Day1
+ * Day2
  */
 public class Day2 {
     static final String EXAMPLE_INPUT_1 = "E:/git/src/jademonkey/advent-of-code-2023/ExampleInputs/Day2";
