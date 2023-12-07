@@ -1,6 +1,5 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -344,9 +343,20 @@ public class Day7 {
 
             // same, sigh
             for (int i = 0; i < 5; i++) {
-                if (otherHand.hand[i] > hand[i]) {
+                int oh = otherHand.hand[i];
+                int mh = hand[i];
+                if(jokerslive) {
+                    if(oh == 11) {
+                        oh = 1;
+                    }
+                    if(mh == 11) {
+                        mh = 1;
+                    }
+                }
+
+                if (oh > mh) {
                     return otherBigger;
-                } else if (otherHand.hand[i] < hand[i]) {
+                } else if (oh < mh) {
                     return otherSmaller;
                 }
                 // same so check next card
